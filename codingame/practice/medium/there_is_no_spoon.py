@@ -6,39 +6,40 @@ import math
 width = int(input())  # the number of cells on the X axis
 height = int(input())  # the number of cells on the Y axis
 
-# 2차원 배열의 생성
-# a = []    # 빈 리스트 생성
-#
-# for i in range(3):
-#     line = []              # 안쪽 리스트로 사용할 빈 리스트 생성
-#     for j in range(2):
-#         line.append(0)     # 안쪽 리스트에 0 추가
-#     a.append(line)         # 전체 리스트에 안쪽 리스트를 추가
-
 a = [[0 for j in range(width)] for i in range(height)]
+
 for i in range(height):
     line = input()  # width characters, each either 0 or .
     for j in range(width):
         a[i][j] = line[j]
+
+
+def find_bottom(height, width, i, j, a):
+    for y in range(i + 1, height):
+        if a[y][j] == '0':
+            return (j, y)
+    return (-1, -1)
+
+
+def find_right(height, width, i, j, a):
+    for x in range(j + 1, width):
+        if a[i][x] == '0':
+            return (x, i)
+    return (-1, -1)
+
 
 # Write an action using print
 # To debug: print("Debug messages...", file=sys.stderr, flush=True)
 for i in range(height):
     for j in range(width):
         if a[i][j] == '0':
-            print('0 0 ', end='')
+            print("{0} {1} ".format(j, i), end='')
 
-        if j+1 < width and a[i][j+1] == '0':
-            print('0 0 ', end='')
-        else:
-            print('-1 -1 ', end='')
+            b_x, b_y = find_right(height, width, i, j, a)
+            print("{0} {1} ".format(b_x, b_y), end='')
 
-        if i+1 < height and a[i+1][j] == '0':
-            print('0 0 ', end='')
-        else:
-            print('-1 -1 ', end='')
-        print()
-
+            r_x, r_y = find_bottom(height, width, i, j, a)
+            print("{0} {1} ".format(r_x, r_y))
 
 # Three coordinates: a node, its right neighbor, its bottom neighbor
 
