@@ -3,10 +3,19 @@
 # 서로 다른 3개를 골라 더했을 때 소수가 되는 경우의 개수를 return 하도록
 # solution 함수를 완성해주세요.
 
+# 입력값 [1,2,3,4] -> 1(개) -> 답 : 7
+from itertools import combinations
+
 def solution(nums):
-    answer = -1
+    result = combinations(nums, 3)
+    count = 0
 
-    # [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
-    print('Hello Python')
-
-    return answer
+    for r in result:
+        num = r[0] + r[1] + r[2]
+        check = 0
+        for i in range(2, num):
+            if num % i == 0:
+                check = 1
+        if check == 0:
+            count += 1
+    return count
