@@ -5,7 +5,7 @@
 
 def lower_bound(nums, target):
     
-    left, right = 0, len(nums) -1 
+    left, right = 0, len(nums)
     
     while left < right:  #left와 right가 만나는 지점이 target값 이상이 처음 나오는 위치
         mid = left + (right - left) // 2
@@ -24,7 +24,7 @@ def lower_bound(nums, target):
 
 def upper_bound(nums, target):
 
-    left, right = 0, len(nums) -1
+    left, right = 0, len(nums)
 
     while left < right:  #left와 right가 만나는 지점이 target값 보다 큰 값이 처음 나오는 위치
         mid = left + (right - left) // 2
