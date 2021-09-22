@@ -5,3 +5,6 @@ class Node:
         self.next = next
 
 # singly linked list 선언
+class SinglyLinkedList(object):
+    def __init__(self):
+        self.head = None
