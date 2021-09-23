@@ -2,8 +2,10 @@
 
 daily algorithm study note 😵‍💫😖
 
-**LEVEL** : SpongeBob
+<br/>
 
 <br/>
+
+**LEVEL** : SpongeBob
 
 ![spongebob](image/spongebob.gif)
