@@ -1,16 +1,43 @@
+## BIG O'S RULES
+
+1. **Worst Case in Senario**
+2. **Remove Constants**
+3. **Different terms for inputs** 
+
+```java
+function compressBoxesTwice(boxes, boxes2){		//Different inputs
+  boxes.forEach(function(boxes){
+    console.log(boxes);
+  })
+  boxes2.forEach(function(boxes){
+    console.log(boxes);
+  })  
+}
+
+//O(2n=n) X
+//O(a + b) O -> we don't know
+//if nested ->O(a*b)
+```
+
+4. **Drop Non Dominants**
+
+<br/>
+
+<br/>
+
 ## BIG O'S
 
 `O(1)` Constant - no loops
 
-`O(log N)` Logarithmic - usually searching algorithms have log n if they are sorted (Binary Search)
+`O(log N)` Logarithmic - usually searching algorithms have log n if they are sorted (**Binary Search**)
 
 `O(n)` Linear - for loops, while loops through n items
 
-`O(n log(n))` Log Linear - usually sorting operations
+`O(n log(n))` Log Linear - **usually sorting operations**
 
 `O(n^2)` Quadratic - every element in a collection needs to be compared to ever other element. Two nested loops
 
-`O(2^n)` Exponential - recursive algorithms that solves a problem of size N
+`O(2^n)` Exponential - **recursive algorithms** that solves a problem of size N
 
 `O(n!)` Factorial - you are adding a loop for every element
 
@@ -52,8 +79,8 @@
 
 ## WHAT CAUSES SPACE COMPLEXITY?
 
-- Variables
-- Data Structures
-- Function Call
-- Allocations
+- **Variables**
+- **Data Structures**
+- **Function Call**
+- **Allocations**
 
