@@ -84,3 +84,8 @@ function compressBoxesTwice(boxes, boxes2){		//Different inputs
 - **Function Call**
 - **Allocations**
 
+
+
+
+
+![Understanding time complexity with Python examples | by Kelvin Salton do  Prado | Towards Data Science](image/1*5ZLci3SuR0zM_QlZOADv8Q.jpeg)
