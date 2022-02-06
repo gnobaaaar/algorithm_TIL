@@ -65,7 +65,7 @@ DP - 1463, 11726, 11727, 9095, 10844, 11057, 2193, 9465, 2156, 11053, 11055, 117
 
 ### leetcode
 
-array : Two Sum, Maximum Subarray, Move Zeroes, Contains Duplicate, Rotate Array
+**array** : **Two Sum**, **Maximum Subarray**, **Move Zeroes**, **Contains Duplicate**, **Rotate Array**
 
 
 
