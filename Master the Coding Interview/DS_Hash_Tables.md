@@ -1,6 +1,6 @@
 # Hash Tables
 
-😃 : **Fast looksups**(good collision resolution needed), **Fast Insers, Flexible Keys**
+😃 : **Fast looksups**(good collision resolution needed), **Fast Inserts, Flexible Keys**
 
 😱 : **Unordered, Slow key iteration**
 
