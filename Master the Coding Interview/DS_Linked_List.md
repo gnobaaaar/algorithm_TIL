@@ -1,5 +1,11 @@
 # Linked List
 
+😃 : Fast Insertion, Fast Deletion, Ordered, Flexible Size 
+
+😱 : Slow Lookup, More Memory
+
+<br/>
+
 head -> x -> tail(last node) -> null
 
 ```javascript
@@ -223,8 +229,28 @@ class DoublyLinkedList {
     //check prams(...)
     const leader = this.traverseToIndex(index-1);
     const unwantedNode = leader.next;
+    unwantedNode.next.prev = leader;
     leader.next = unwantedNode.next;
     this.length--;
+    return this.printList();
+  }
+  
+  //how to reverse?
+  reverse(){				
+    if(!this.head.next){
+      return this.head;
+    }
+    let first = this.head;
+    this.tail = this.head;
+    let second = first.next;
+    while(second){
+      const temp = second.next;
+      second.next = first;
+      first = second;
+      second = temp;
+    }
+    this.head.next = null;
+    this.head = first;
     return this.printList();
   }
 }
@@ -235,9 +261,12 @@ myLinkedList.append(16);
 myLinkedList.prepend(1);
 myLinkedList.printList();
 myLinkedList.insert(2, 99);
-
 console.log(MyLinkedList);
 
 myLinkedList.remove(2);
+myLinkedList.reverse();
+console.log(MyLinkedList);
 ```
+
+<br/>
 

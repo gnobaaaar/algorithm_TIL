@@ -1,4 +1,4 @@
-## LOOP
+### LOOP
 
 ```javascript
 function findNemo (array){
@@ -26,5 +26,9 @@ const findNemo3 = array => {
 }
 ```
 
+<br/>
 
+### How Does Javscript Work?
+
+Program : allocate memory, parse and excute
 
