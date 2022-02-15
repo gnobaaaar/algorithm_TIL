@@ -5,6 +5,13 @@
 - Subtree
 - DOM -> Tree Data Structure
 - linked list -> 트리의 일종, one path
+- BST : 모든 값들이 크기를 기준으로 노드들에 의해 분류(중복값X)
+- Balanced
+- Complete Binary Tree : 트리 레벨별로 좌측부터 노드가 채워지는 이진트리
+- Full Binary Tree : 노드가 자식을 가질거면 2개의 자식 모두를 가지거나 하나도 가지지 않는 트리
+- Perfect Binary Tree : 모든 노드가 두개의 Child를 가지며 정확한 피라미드 모양을 가지는 이진트리
+  - 총 노드의 수 : 2^n -1
+
 
 <br/>
 
@@ -221,4 +228,41 @@ function traverse(node) {
 ```
 
 <br/>
+
+### Binary Heaps
+
+😃 : Better than O(n), Priority, Flexible Size, Fast Insert
+
+😱 : Slow Lookup
+
+- heap = 쌓여있는 더미
+- 최대 이진 힙(MaxBinaryHeap)에서는 부모 노드가 항상 자식 노드들보다 커야 한다
+- 최소 이진 힙(MinBinaryHeap)에서는 부모 노드가 항상 자식 노드들보다 작아야 한다
+- 형제노드간에는 규칙이 없다
+
+- lookup -> O(n), insert/delete ->  O(log N)
+
+<br>
+
+**parent/child**
+
+- 부모의 위치(n)를 가지고 자식의 위치 찾기
+  - `left child` 인덱스 : 2n+1
+  - `right child` 인덱스 : 2n+2
+
+- child 노드의 인덱스를 가지고 parent 노드의 인덱스를 찾기
+  - 자식의 위치(n)를 가지고 부모의 위치 찾기
+    - `parent` 인덱스 : Math.floor((n-1)/2)
+
+<br/>
+
+### Trie
+
+문자열을 저장하고 효율적인 탐색을 위한 자료구조
+
+검색엔진 사이트에서 제공하는 **자동 완성 및 검색어 추천 기능 등 문자열을 탐색하는 곳**에서 Trie 알고리즘을 사용
+
+각 노드에서 자식에 대한 포인터들을 배열로 저장하므로 큰 저장 공간을 필요로 한다
+
+![Depiction of a trie. Single empty circle, representing the root node, points to three children. The arrow to each child is marked by a different letter. The children themselves have similar set of arrows and child nodes, with nodes that correspond to full words bearing blue integer values.](image/250px-Trie_example.svg.png)
 
