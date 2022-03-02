@@ -48,4 +48,16 @@ function binarySearch(array, target){
 
 <br/>
 
-### Graph + Tree
+### BFS
+
+😃 : Shortest Path, Closer Nodes
+
+😱 : More Memory
+
+
+
+### DFS
+
+😃 : Less Memory, Does Path Exist?
+
+😱 : Can Get Slow
