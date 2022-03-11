@@ -1,23 +1,23 @@
 for i in range(int(input())):
-    num, target = map(int, input().split())
-    qu = list(map(int, input().split()))
-    result = []
-    now = target
-    index = 0
-    while qu:
-        if now == 0 and qu[0] == max(qu):
-            result.append(qu.pop(0))
-            print(len(result))
-            break
-        elif qu[0] == max(qu):
-            now -= 1
-            result.append(qu.pop(0))
-        elif now == 0 and qu[0] < max(qu):
-            now = len(qu) - 1
-            tmp = qu.pop(0)
-            qu.append(tmp)
-        elif qu[0] < max(qu):
-            now -= 1
-            tmp = qu.pop(0)
-            qu.append(tmp)
+    n, index = map(int, input().split(' '))
+    arr = list(map(int, input().split(' ')))
+    tmp = index
+    count = 1
+
+    while len(arr):
+        if arr[0] == max(arr):
+            if tmp == 0:
+                print(count)
+                break
+            else:
+                arr.pop(0)
+                tmp -= 1
+                count += 1
+        else:
+            if tmp == 0:
+                arr.append(arr.pop(0))
+                tmp = len(arr) -1
+            else:
+                arr.append(arr.pop(0))
+                tmp -= 1
 

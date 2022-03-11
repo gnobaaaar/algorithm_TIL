@@ -1,14 +1,8 @@
 def solution(x, n):
     answer = []
-    if (x >= 0):
-        tmp = 0
-    else:
-        tmp =
-
-    while (tmp < x * n):
-        tmp = tmp + x
-        answer.append(tmp)
+    key = x
+    for i in range(n):
+        answer.append(x)
+        x = x + key
 
     return answer
-
-print(solution(-4,2))
