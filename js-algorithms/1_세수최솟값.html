@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(a, b, c) {
+        let answer;
+
+        /*let min = a;
+        if (a > b && c > b) {
+          min = b;
+        } else if (a > b && b > c) {
+          min = c;
+        }
+        answer = min;
+        */
+
+        if (a < b) answer = a;
+        else answer = b;
+        if (c < answer) answer = c;
+
+        return answer;
+      }
+
+      console.log(solution(2, 5, 1));
+    </script>
+  </body>
+</html>
