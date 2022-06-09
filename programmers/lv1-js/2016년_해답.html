@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function solution(a,b){
+        return ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'][new Date(2016, a-1, b).getDay()]
+    }
+    let a = 5, b=24;
+    console.log(solution(a,b));
+
+    //var date = new Date(2016, (a - 1), b);
+    //return date.toString().slice(0, 3).toUpperCase();
+</script>
+</body>
+</html>

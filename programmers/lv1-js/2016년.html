@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function solution(a,b){
+            var answer = '';
+            let sum = 0;
+            const months = [31,29,31,30,31,30,31,31,30,31,30,31];
+            const array = ['THU', 'FRI', 'SAT', 'SUN', 'MON', 'TUE', 'WED'];
+
+            for (let i=0; i<a-1;i++){
+                sum += months[i];
+            }
+            answer = array[(sum+b)%7];
+            return answer;
+        }
+        let a = 11, b=1;
+        console.log(solution(a,b));
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = "";
+
+        for (x of s) {
+          if (x.charCodeAt() >= 65 && x.charCodeAt() <= 90) {
+            answer += x;
+          }
+          // if (c.charCodeAt()>=97 && x.charCodeAt() <= 122)) answer += String.fromCharCode(num-32);
+          else {
+            answer += x.toUpperCase();
+          }
+
+          //if (x === x.toLowerCase()) answer += x.toUpperCase();
+          //else answer += x;
+        }
+
+        return answer;
+      }
+
+      let str = "ItisTimeToStudy";
+      console.log(solution(str));
+    </script>
+  </body>
+</html>

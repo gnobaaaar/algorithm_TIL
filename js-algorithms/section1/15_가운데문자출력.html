@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer;
+        //let mid = Math.floor(s.length / 2);
+        let mid = parseInt(s.length / 2);
+
+        if (s.length % 2 == 0) {
+          answer = s.substr(mid - 1, 2);
+        } else {
+          answer = s.substr(mid, 1);
+        }
+        return answer;
+      }
+      console.log(solution("study"));
+    </script>
+  </body>
+</html>
