@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = "YES";
+
+        /*
+        let string = s.toLowerCase();
+
+        for (let i = 0; i < Math.floor(string.length / 2); i++) {
+          if (string[i] != string[string.length - 1 - i]) {
+            answer = "NO";
+          }
+        }
+        */
+
+        s = s.toLowerCase();
+        if (s.split("").reverse().join("") !== s) answer = "NO";
+
+        return answer;
+      }
+
+      let str = "goooG";
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
